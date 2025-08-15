@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const post = await getPostData(params.slug);
     return {
         title: post.title,
-        description: `Lee el artículo "${post.title}" en el blog de RespireVital.`,
+        description: `Lee el artículo "${post.title}" en el blog de AMFROS.`,
     };
 }
 

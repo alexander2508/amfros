@@ -5,7 +5,7 @@ import type { Specialist } from "@/types";
 
 export const metadata: Metadata = {
   title: "Nuestros Especialistas",
-  description: "Conoce al equipo de dedicados profesionales médicos e investigadores detrás de RespireVital.",
+  description: "Conoce al equipo de dedicados profesionales médicos e investigadores detrás de AMFROS.",
 };
 
 const specialists: Specialist[] = [

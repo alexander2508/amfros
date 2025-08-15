@@ -12,7 +12,7 @@ import type { Product } from "@/types";
 
 export const metadata: Metadata = {
     title: "Panel de Usuario",
-    description: "Gestiona tu cuenta, pedidos y preferencias de RespireVital.",
+    description: "Gestiona tu cuenta, pedidos y preferencias de AMFROS.",
 };
 
 const favoriteProducts: Product[] = [

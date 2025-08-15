@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros",
-  description: "Conoce la misión, los valores y el equipo detrás de las innovadoras soluciones de salud de RespireVital.",
+  description: "Conoce la misión, los valores y el equipo detrás de las innovadoras soluciones de salud de AMFROS.",
 };
 
 export default function AboutPage() {
@@ -23,18 +23,18 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">La Historia de RespireVital</h2>
+              <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">La Historia de AMFROS</h2>
               <p className="mt-6 text-lg text-muted-foreground">
-                RespireVital nació de una simple pero profunda constatación: millones de personas sufren problemas crónicos que pueden atribuirse a patrones de respiración disfuncionales y a una mala postura oral. Desde trastornos del sueño hasta baja energía y problemas dentales, las consecuencias son de gran alcance.
+                AMFROS nació de una simple pero profunda constatación: millones de personas sufren problemas crónicos que pueden atribuirse a patrones de respiración disfuncionales y a una mala postura oral. Desde trastornos del sueño hasta baja energía y problemas dentales, las consecuencias son de gran alcance.
               </p>
               <p className="mt-4 text-lg text-muted-foreground">
-                Frustrados por la falta de soluciones accesibles y no invasivas, nuestros fundadores reunieron a expertos líderes en odontología, terapia miofuncional y ciencia respiratoria. Nuestro objetivo era crear herramientas eficaces y basadas en la evidencia que capacitaran a las personas para recuperar su salud de forma natural. Hoy, RespireVital está a la vanguardia de esta revolución del bienestar.
+                Frustrados por la falta de soluciones accesibles y no invasivas, nuestros fundadores reunieron a expertos líderes en odontología, terapia miofuncional y ciencia respiratoria. Nuestro objetivo era crear herramientas eficaces y basadas en la evidencia que capacitaran a las personas para recuperar su salud de forma natural. Hoy, AMFROS está a la vanguardia de esta revolución del bienestar.
               </p>
             </div>
             <div className="order-1 md:order-2">
               <Image
                 src="https://placehold.co/800x600.png"
-                alt="El equipo de RespireVital colaborando"
+                alt="El equipo de AMFROS colaborando"
                 width={800}
                 height={600}
                 className="rounded-lg shadow-xl"

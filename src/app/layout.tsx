@@ -7,10 +7,10 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: 'RespireVital - Respira Mejor, Vive Plenamente',
-    template: '%s | RespireVital',
+    default: 'AMFROS - Respira Mejor, Vive Plenamente',
+    template: '%s | AMFROS',
   },
-  description: 'RespireVital ofrece soluciones innovadoras para mejorar la salud oral y la respiración. Explora nuestros productos, investigaciones y consejos de expertos.',
+  description: 'AMFROS ofrece soluciones innovadoras para mejorar la salud oral y la respiración. Explora nuestros productos, investigaciones y consejos de expertos.',
   keywords: ['salud oral', 'respiración', 'bienestar', 'terapia miofuncional', 'apnea del sueño'],
 };
 

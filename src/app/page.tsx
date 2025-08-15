@@ -157,7 +157,7 @@ export default function Home() {
           <div className="text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Lo que Dice Nuestra Comunidad</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-              Historias reales de personas que han transformado sus vidas con RespireVital.
+              Historias reales de personas que han transformado sus vidas con AMFROS.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">

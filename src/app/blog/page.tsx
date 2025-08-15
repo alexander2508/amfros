@@ -9,7 +9,7 @@ import type { BlogPost } from "@/types";
 
 export const metadata: Metadata = {
     title: "Blog",
-    description: "Explora artículos sobre salud oral, respiración, investigación científica y estilo de vida de los expertos de RespireVital.",
+    description: "Explora artículos sobre salud oral, respiración, investigación científica y estilo de vida de los expertos de AMFROS.",
 };
 
 const blogPosts: BlogPost[] = [
@@ -55,7 +55,7 @@ export default function BlogPage() {
     return (
         <div className="container mx-auto px-4 py-16 sm:py-24">
             <div className="text-center mb-16">
-                <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Blog de RespireVital</h1>
+                <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Blog de AMFROS</h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                     Conocimientos e ideas desde la vanguardia del bienestar respiratorio y oral.
                 </p>

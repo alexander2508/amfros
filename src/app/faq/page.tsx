@@ -9,7 +9,7 @@ import type { FaqItem } from "@/types";
 
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes",
-  description: "Encuentra respuestas a preguntas comunes sobre los productos RespireVital, envíos y nuestro enfoque de la salud.",
+  description: "Encuentra respuestas a preguntas comunes sobre los productos AMFROS, envíos y nuestro enfoque de la salud.",
 };
 
 const faqItems: FaqItem[] = [
@@ -19,7 +19,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "¿Son seguros sus productos?",
-    answer: "Absolutamente. Todos los productos de RespireVital están hechos de materiales biocompatibles de alta calidad y de grado médico. Están diseñados en consulta con dentistas y expertos médicos para garantizar que sean seguros y efectivos cuando se usan según las indicaciones."
+    answer: "Absolutamente. Todos los productos de AMFROS están hechos de materiales biocompatibles de alta calidad y de grado médico. Están diseñados en consulta con dentistas y expertos médicos para garantizar que sean seguros y efectivos cuando se usan según las indicaciones."
   },
   {
     question: "¿Cuánto tiempo se tarda en ver resultados?",

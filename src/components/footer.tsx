@@ -12,7 +12,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Logo />
-              <span className="font-bold text-lg font-headline">RespireVital</span>
+              <span className="font-bold text-lg font-headline">AMFROS</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Dedicados a mejorar la salud a través de una mejor respiración y postura oral.
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
         
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} RespireVital. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} AMFROS. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

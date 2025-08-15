@@ -28,7 +28,7 @@ export function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo />
-            <span className="hidden font-bold sm:inline-block font-headline">RespireVital</span>
+            <span className="hidden font-bold sm:inline-block font-headline">AMFROS</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navItems.map((item) => (
@@ -57,7 +57,7 @@ export function Header() {
           <SheetContent side="left" className="pr-0">
             <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
               <Logo />
-              <span className="font-bold font-headline">RespireVital</span>
+              <span className="font-bold font-headline">AMFROS</span>
             </Link>
             <div className="my-4 h-px w-full bg-border" />
             <div className="flex flex-col space-y-3">
@@ -88,7 +88,7 @@ export function Header() {
         </Sheet>
         <Link href="/" className="flex items-center space-x-2 md:hidden">
           <Logo />
-          <span className="font-bold font-headline">RespireVital</span>
+          <span className="font-bold font-headline">AMFROS</span>
         </Link>
 
         <div className="flex flex-1 items-center justify-end space-x-2">

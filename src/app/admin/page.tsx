@@ -4,7 +4,7 @@ import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Panel de Administración",
-    description: "Panel administrativo de RespireVital.",
+    description: "Panel administrativo de AMFROS.",
     robots: {
         index: false,
         follow: false,
@@ -21,7 +21,7 @@ export default function AdminPage() {
                             <Shield className="h-6 w-6" />
                         </div>
                         <CardTitle className="font-headline text-2xl">Panel de Administración</CardTitle>
-                        <CardDescription>Bienvenido al área administrativa de RespireVital.</CardDescription>
+                        <CardDescription>Bienvenido al área administrativa de AMFROS.</CardDescription>
                     </CardHeader>
                     <CardContent className="text-center">
                         <p className="text-muted-foreground">
