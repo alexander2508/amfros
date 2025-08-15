@@ -1,3 +1,4 @@
+
 import { Metadata } from "next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,16 +10,14 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Heart, Package, User, Download, LogOut } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
 import type { Product } from "@/types";
+import { getAllProducts } from "@/lib/products";
 
 export const metadata: Metadata = {
     title: "Panel de Usuario",
     description: "Gestiona tu cuenta, pedidos y preferencias de AMFROS.",
 };
 
-const favoriteProducts: Product[] = [
-    { id: "2", name: "Ayuda Miofuncional para el Sueño", price: 129.99, image: "https://placehold.co/600x600.png", imageHint: "ayuda para dormir", description: "..." },
-    { id: "3", name: "Kit de Ejercicios de Respiración", price: 49.99, image: "https://placehold.co/600x600.png", imageHint: "kit de ejercicio", description: "..." },
-]
+const favoriteProducts: Product[] = getAllProducts();
 
 export default function UserPanelPage() {
     return (
@@ -67,9 +66,9 @@ export default function UserPanelPage() {
                                     <Input id="new-password" type="password" />
                                 </div>
                             </CardContent>
-                            <CardHeader className="pt-0">
+                            <CardContent>
                                 <Button className="font-headline">Guardar Cambios</Button>
-                            </CardHeader>
+                            </CardContent>
                         </Card>
                     </TabsContent>
                     <TabsContent value="orders">
@@ -93,13 +92,13 @@ export default function UserPanelPage() {
                                             <TableCell className="font-medium">#RV1024</TableCell>
                                             <TableCell>2023-10-26</TableCell>
                                             <TableCell>Enviado</TableCell>
-                                            <TableCell className="text-right">$129.99</TableCell>
+                                            <TableCell className="text-right">$99.99</TableCell>
                                         </TableRow>
                                         <TableRow>
                                             <TableCell className="font-medium">#RV1018</TableCell>
                                             <TableCell>2023-08-15</TableCell>
                                             <TableCell>Entregado</TableCell>
-                                            <TableCell className="text-right">$79.99</TableCell>
+                                            <TableCell className="text-right">$320.00</TableCell>
                                         </TableRow>
                                     </TableBody>
                                 </Table>
@@ -115,11 +114,7 @@ export default function UserPanelPage() {
                             <CardContent>
                                 <ul className="space-y-3">
                                     <li className="flex justify-between items-center p-3 rounded-md border">
-                                        <span>Guía de Ejercicios de Respiración.pdf</span>
-                                        <Button variant="outline" size="sm">Descargar</Button>
-                                    </li>
-                                    <li className="flex justify-between items-center p-3 rounded-md border">
-                                        <span>Inicio Rápido de Postura Oral.pdf</span>
+                                        <span>Manual de Ortopedia Funcional.pdf</span>
                                         <Button variant="outline" size="sm">Descargar</Button>
                                     </li>
                                 </ul>
@@ -131,7 +126,7 @@ export default function UserPanelPage() {
                              <CardHeader>
                                 <CardTitle>Artículos Guardados</CardTitle>
                                 <CardDescription>Tus productos favoritos, todo en un solo lugar.</CardDescription>
-                            </CardHeader>
+                            </Header>
                             <CardContent>
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {favoriteProducts.map((product) => (

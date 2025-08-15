@@ -8,28 +8,9 @@ import { Award, BookOpen, CheckCircle2, Lightbulb, ShieldCheck, Zap } from "luci
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { getAllProducts } from "@/lib/products";
 
-/** --- PRODUCTS: only items discussed in the book --- */
-const featuredProducts: Product[] = [
-  {
-    id: "book-01",
-    name: "Manual de Ortopedia Funcional en Clase II (Libro)",
-    price: 49.00,
-    image: "https://placehold.co/800x1000.png",
-    imageHint: "portada del libro de ortopedia funcional",
-    description:
-      "Guía práctica en 8 capítulos sobre crecimiento craneofacial, diagnóstico y manejo temprano de la Clase II. Incluye el AAMF como alternativa fija."
-  },
-  {
-    id: "aamf-01",
-    name: "AAMF – Arco de Adelantamiento Mandibular Fijo",
-    price: 320.00,
-    image: "https://placehold.co/800x800.png",
-    imageHint: "dispositivo ortopédico funcional fijo",
-    description:
-      "Aparato ortopédico funcional fijo descrito en el libro. Favorece la descompresión articular y el crecimiento condilar secundario."
-  },
-];
+const featuredProducts = getAllProducts();
 
 const testimonials: Testimonial[] = [
   {

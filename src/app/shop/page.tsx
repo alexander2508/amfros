@@ -1,7 +1,8 @@
+
 import { Metadata } from "next";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
-import type { Product } from "@/types";
+import { getAllProducts } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Tienda",
@@ -10,26 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/shop" },
 };
 
-const products: Product[] = [
-  {
-    id: "book-01",
-    name: "Manual de Ortopedia Funcional Mandibular (Libro)",
-    price: 99.99,
-    image: "https://placehold.co/600x600.png",
-    imageHint: "libro medico portada",
-    description:
-      "Guía clínica en 8 capítulos: crecimiento craneofacial, diagnóstico del pico puberal y protocolo con AAMF.",
-  },
-  {
-    id: "aamf-01",
-    name: "AAMF – Arco de Adelantamiento Mandibular Fijo",
-    price: 320.00,
-    image: "https://placehold.co/600x600.png",
-    imageHint: "dispositivo ortopédico funcional fijo",
-    description:
-      "Aparato fijo descrito en el libro: CPT y EN; no une maxilar y mandíbula, permite lateralidades y favorece la descompresión de la ATM.",
-  },
-];
+const products = getAllProducts();
 
 export default function ShopPage() {
   return (
