@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -66,7 +67,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </p>
         <Button size="sm" className="font-headline" onClick={handleAddToCart}>
           <ShoppingCart className="mr-2 h-4 w-4" />
-          Añadir al Carrito
+          Añadir
         </Button>
       </CardFooter>
     </Card>

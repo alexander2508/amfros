@@ -1,3 +1,4 @@
+
 'use client';
 
 import {
@@ -11,12 +12,32 @@ import {
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { useCart } from '@/context/cart-context';
+import { useAuth } from '@/context/auth-context';
+import { useToast } from '@/hooks/use-toast';
 import { ShoppingCart, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export function CartSheet() {
   const { cartItems, cartCount, cartTotal, removeFromCart, updateQuantity } = useCart();
+  const { user } = useAuth();
+  const router = useRouter();
+  const { toast } = useToast();
+
+  const handleCheckout = () => {
+    if (user) {
+      router.push('/checkout');
+    } else {
+      toast({
+        title: 'Inicio de Sesión Requerido',
+        description: 'Debes iniciar sesión para continuar con la compra.',
+        variant: 'destructive',
+      });
+      router.push('/login');
+    }
+  };
+
 
   return (
     <Sheet>
@@ -95,8 +116,8 @@ export function CartSheet() {
                   <span>Subtotal</span>
                   <span>${cartTotal.toFixed(2)}</span>
                 </div>
-                <Button asChild className="w-full font-headline" size="lg">
-                  <Link href="/checkout">Ir a Pagar</Link>
+                <Button onClick={handleCheckout} className="w-full font-headline" size="lg">
+                    Ir a Pagar
                 </Button>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/cart">Ver Carrito</Link>

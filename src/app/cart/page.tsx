@@ -1,18 +1,36 @@
 
 'use client';
 
-import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useCart } from '@/context/cart-context';
+import { useAuth } from '@/context/auth-context';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { Trash2, ShoppingCart } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 export default function CartPage() {
   const { cartItems, cartCount, cartTotal, removeFromCart, updateQuantity } = useCart();
+  const { user } = useAuth();
+  const router = useRouter();
+  const { toast } = useToast();
+
+  const handleCheckout = () => {
+    if (user) {
+      router.push('/checkout');
+    } else {
+      toast({
+        title: 'Inicio de Sesión Requerido',
+        description: 'Debes iniciar sesión para continuar con la compra.',
+        variant: 'destructive',
+      });
+      router.push('/login');
+    }
+  };
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -100,8 +118,8 @@ export default function CartPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button asChild size="lg" className="w-full font-headline">
-                  <Link href="/checkout">Proceder al Pago</Link>
+                <Button onClick={handleCheckout} size="lg" className="w-full font-headline">
+                  Proceder al Pago
                 </Button>
               </CardFooter>
             </Card>

@@ -12,11 +12,6 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Heart, Package, User, Download, LogOut } from "lucide-react";
-import { ProductCard } from "@/components/product-card";
-import type { Product } from "@/types";
-import { getAllProducts } from "@/lib/products";
-
-const favoriteProducts: Product[] = getAllProducts();
 
 export default function UserPanelPage() {
     const { user, loading, logout } = useAuth();
@@ -92,30 +87,12 @@ export default function UserPanelPage() {
                                 <CardDescription>Revisa tus compras anteriores.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <Table>
-                                    <TableHeader>
-                                        <TableRow>
-                                            <TableHead>ID de Pedido</TableHead>
-                                            <TableHead>Fecha</TableHead>
-                                            <TableHead>Estado</TableHead>
-                                            <TableHead className="text-right">Total</TableHead>
-                                        </TableRow>
-                                    </TableHeader>
-                                    <TableBody>
-                                        <TableRow>
-                                            <TableCell className="font-medium">#RV1024</TableCell>
-                                            <TableCell>2023-10-26</TableCell>
-                                            <TableCell>Enviado</TableCell>
-                                            <TableCell className="text-right">$99.99</TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell className="font-medium">#RV1018</TableCell>
-                                            <TableCell>2023-08-15</TableCell>
-                                            <TableCell>Entregado</TableCell>
-                                            <TableCell className="text-right">$320.00</TableCell>
-                                        </TableRow>
-                                    </TableBody>
-                                </Table>
+                                <div className="text-center py-10 text-muted-foreground">
+                                    <p>Aún no has realizado ningún pedido.</p>
+                                    <Button asChild variant="link">
+                                        <Link href="/shop">Empezar a comprar</Link>
+                                    </Button>
+                                </div>
                             </CardContent>
                         </Card>
                     </TabsContent>
@@ -126,12 +103,9 @@ export default function UserPanelPage() {
                                 <CardDescription>Accede a tus guías y recursos digitales comprados.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <ul className="space-y-3">
-                                    <li className="flex justify-between items-center p-3 rounded-md border">
-                                        <span>Manual de Ortopedia Funcional.pdf</span>
-                                        <Button variant="outline" size="sm">Descargar</Button>
-                                    </li>
-                                </ul>
+                               <div className="text-center py-10 text-muted-foreground">
+                                    <p>No tienes productos descargables.</p>
+                                </div>
                             </CardContent>
                         </Card>
                     </TabsContent>
@@ -142,10 +116,8 @@ export default function UserPanelPage() {
                                 <CardDescription>Tus productos favoritos, todo en un solo lugar.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {favoriteProducts.map((product) => (
-                                        <ProductCard key={product.id} product={product} />
-                                    ))}
+                                <div className="text-center py-10 text-muted-foreground">
+                                    <p>No has guardado ningún artículo como favorito.</p>
                                 </div>
                             </CardContent>
                         </Card>

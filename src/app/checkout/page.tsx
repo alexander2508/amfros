@@ -1,7 +1,9 @@
 
 'use client';
 
+import { useEffect } from 'react';
 import { useCart } from '@/context/cart-context';
+import { useAuth } from '@/context/auth-context';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -14,8 +16,20 @@ import Link from 'next/link';
 
 export default function CheckoutPage() {
   const { cartItems, cartTotal, clearCart } = useCart();
+  const { user, loading } = useAuth();
   const { toast } = useToast();
   const router = useRouter();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      toast({
+        title: 'Acceso Denegado',
+        description: 'Debes iniciar sesión para acceder a esta página.',
+        variant: 'destructive'
+      })
+      router.push('/login');
+    }
+  }, [user, loading, router, toast]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,6 +44,14 @@ export default function CheckoutPage() {
     clearCart();
     router.push('/');
   };
+
+  if (loading || !user) {
+    return (
+        <div className="container mx-auto px-4 py-12 text-center">
+            <p>Cargando...</p>
+        </div>
+    )
+  }
 
   if (cartItems.length === 0) {
     return (
@@ -58,7 +80,7 @@ export default function CheckoutPage() {
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo Electrónico</Label>
-                  <Input id="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+                  <Input id="email" type="email" placeholder="tucorreo@ejemplo.com" defaultValue={user.email || ''} required />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
