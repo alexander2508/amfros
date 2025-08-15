@@ -7,7 +7,8 @@ import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, ShoppingCart, User } from "lucide-react";
+import { Menu, User } from "lucide-react";
+import { CartSheet } from "./cart-sheet";
 
 const navItems = [
   { href: "/", label: "Inicio" },
@@ -97,10 +98,7 @@ export function Header() {
                 <Link href="/user"><User className="h-5 w-5" /></Link>
             </Button>
           </div>
-          <Button variant="ghost" size="icon">
-            <ShoppingCart className="h-5 w-5" />
-            <span className="sr-only">Carrito de Compras</span>
-          </Button>
+          <CartSheet />
         </div>
       </div>
     </header>

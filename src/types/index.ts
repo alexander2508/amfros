@@ -5,6 +5,7 @@ export interface Product {
     description: string;
     image: string;
     imageHint?: string;
+    details?: any; // Para detalles específicos del producto como libro o AAMF
 }
   
 export interface Testimonial {
