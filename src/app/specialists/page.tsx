@@ -4,34 +4,34 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Specialist } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Our Specialists",
-  description: "Meet the team of dedicated medical professionals and researchers behind RespireVital.",
+  title: "Nuestros Especialistas",
+  description: "Conoce al equipo de dedicados profesionales médicos e investigadores detrás de RespireVital.",
 };
 
 const specialists: Specialist[] = [
   {
     id: "1",
-    name: "Dr. Eleanor Vance",
-    title: "Chief Medical Officer, DDS",
+    name: "Dra. Eleanor Vance",
+    title: "Directora Médica, DDS",
     avatar: "https://placehold.co/200x200.png",
-    avatarHint: "professional woman portrait",
-    bio: "Dr. Vance is a leading expert in myofunctional therapy and its connection to orthodontic health. With over 20 years of clinical experience, she guides our product development and research initiatives, ensuring they meet the highest medical standards."
+    avatarHint: "retrato mujer profesional",
+    bio: "La Dra. Vance es una experta líder en terapia miofuncional y su conexión con la salud ortodóntica. Con más de 20 años de experiencia clínica, guía nuestro desarrollo de productos e iniciativas de investigación, asegurando que cumplan con los más altos estándares médicos."
   },
   {
     id: "2",
     name: "Dr. Kenji Tanaka",
-    title: "Head of Respiratory Science, PhD",
+    title: "Jefe de Ciencia Respiratoria, PhD",
     avatar: "https://placehold.co/200x200.png",
-    avatarHint: "professional man portrait",
-    bio: "Dr. Tanaka's research focuses on the biomechanics of breathing and sleep-disordered breathing. His work has been published in numerous peer-reviewed journals, and he is passionate about translating complex science into practical solutions for everyday health."
+    avatarHint: "retrato hombre profesional",
+    bio: "La investigación del Dr. Tanaka se centra en la biomecánica de la respiración y los trastornos respiratorios del sueño. Su trabajo ha sido publicado en numerosas revistas revisadas por pares y le apasiona traducir la ciencia compleja en soluciones prácticas para la salud cotidiana."
   },
   {
     id: "3",
     name: "Maria Rodriguez",
-    title: "Lead Product Designer, RDH",
+    title: "Diseñadora Principal de Productos, RDH",
     avatar: "https://placehold.co/200x200.png",
-    avatarHint: "professional woman portrait",
-    bio: "As a registered dental hygienist with a background in industrial design, Maria bridges the gap between clinical needs and user experience. She is dedicated to creating products that are not only effective but also comfortable and easy to use."
+    avatarHint: "retrato mujer profesional",
+    bio: "Como higienista dental registrada con experiencia en diseño industrial, María cierra la brecha entre las necesidades clínicas y la experiencia del usuario. Se dedica a crear productos que no solo son efectivos sino también cómodos y fáciles de usar."
   },
 ];
 
@@ -40,9 +40,9 @@ export default function SpecialistsPage() {
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="text-center mb-16">
-          <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Meet Our Experts</h1>
+          <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Conoce a Nuestros Expertos</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Our team's collective expertise is the driving force behind our innovation.
+            La experiencia colectiva de nuestro equipo es la fuerza impulsora detrás de nuestra innovación.
           </p>
         </div>
 

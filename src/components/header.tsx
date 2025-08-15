@@ -10,12 +10,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ShoppingCart, User } from "lucide-react";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/specialists", label: "Specialists" },
-  { href: "/shop", label: "Shop" },
+  { href: "/", label: "Inicio" },
+  { href: "/about", label: "Sobre Nosotros" },
+  { href: "/specialists", label: "Especialistas" },
+  { href: "/shop", label: "Tienda" },
   { href: "/blog", label: "Blog" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/faq", label: "Preguntas Frecuentes" },
 ];
 
 export function Header() {
@@ -46,12 +46,12 @@ export function Header() {
           </nav>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Menú Móvil */}
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden">
               <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle Menu</span>
+              <span className="sr-only">Alternar Menú</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
@@ -78,10 +78,10 @@ export function Header() {
             <div className="my-4 h-px w-full bg-border" />
             <div className="flex flex-col space-y-3">
                 <Link href="/user" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                    <User className="mr-2 h-4 w-4" /> User Panel
+                    <User className="mr-2 h-4 w-4" /> Panel de Usuario
                 </Link>
                 <Link href="/admin" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                    <User className="mr-2 h-4 w-4" /> Admin Panel
+                    <User className="mr-2 h-4 w-4" /> Panel de Administración
                 </Link>
             </div>
           </SheetContent>
@@ -99,7 +99,7 @@ export function Header() {
           </div>
           <Button variant="ghost" size="icon">
             <ShoppingCart className="h-5 w-5" />
-            <span className="sr-only">Shopping Cart</span>
+            <span className="sr-only">Carrito de Compras</span>
           </Button>
         </div>
       </div>

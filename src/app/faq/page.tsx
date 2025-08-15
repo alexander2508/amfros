@@ -8,34 +8,34 @@ import {
 import type { FaqItem } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions",
-  description: "Find answers to common questions about RespireVital products, shipping, and our approach to health.",
+  title: "Preguntas Frecuentes",
+  description: "Encuentra respuestas a preguntas comunes sobre los productos RespireVital, envíos y nuestro enfoque de la salud.",
 };
 
 const faqItems: FaqItem[] = [
   {
-    question: "What is myofunctional therapy?",
-    answer: "Myofunctional therapy is a program of exercises that helps retrain the muscles of the mouth, tongue, and face to function correctly. It's often used to correct improper swallowing, breathing, and resting postures of the tongue and lips, which can impact dental health, sleep, and more."
+    question: "¿Qué es la terapia miofuncional?",
+    answer: "La terapia miofuncional es un programa de ejercicios que ayuda a reeducar los músculos de la boca, la lengua y la cara para que funcionen correctamente. A menudo se utiliza para corregir la deglución, la respiración y las posturas de reposo incorrectas de la lengua y los labios, que pueden afectar la salud dental, el sueño y más."
   },
   {
-    question: "Are your products safe to use?",
-    answer: "Absolutely. All RespireVital products are made from high-quality, medical-grade, biocompatible materials. They are designed in consultation with dentists and medical experts to ensure they are both safe and effective when used as directed."
+    question: "¿Son seguros sus productos?",
+    answer: "Absolutamente. Todos los productos de RespireVital están hechos de materiales biocompatibles de alta calidad y de grado médico. Están diseñados en consulta con dentistas y expertos médicos para garantizar que sean seguros y efectivos cuando se usan según las indicaciones."
   },
   {
-    question: "How long does it take to see results?",
-    answer: "Results can vary depending on the individual and the specific product. Many users report noticeable improvements within a few weeks of consistent use. For best results, we recommend following the included instructions and using the products as part of a daily routine."
+    question: "¿Cuánto tiempo se tarda en ver resultados?",
+    answer: "Los resultados pueden variar según el individuo y el producto específico. Muchos usuarios informan mejoras notables a las pocas semanas de uso constante. Para obtener los mejores resultados, recomendamos seguir las instrucciones incluidas y usar los productos como parte de una rutina diaria."
   },
   {
-    question: "Can I use your products if I have braces or other dental work?",
-    answer: "It depends on the product and your specific dental situation. We strongly recommend consulting with your dentist or orthodontist before starting to use any new oral device to ensure it's appropriate for you."
+    question: "¿Puedo usar sus productos si tengo brackets u otro trabajo dental?",
+    answer: "Depende del producto y de su situación dental específica. Recomendamos encarecidamente consultar con su dentista u ortodoncista antes de comenzar a usar cualquier dispositivo oral nuevo para asegurarse de que sea apropiado para usted."
   },
   {
-    question: "What is your return policy?",
-    answer: "We offer a 30-day satisfaction guarantee on most of our products. If you're not completely satisfied with your purchase, you can return it within 30 days for a full refund. Please see our Shipping & Returns page for detailed information."
+    question: "¿Cuál es su política de devoluciones?",
+    answer: "Ofrecemos una garantía de satisfacción de 30 días en la mayoría de nuestros productos. Si no está completamente satisfecho con su compra, puede devolverla en un plazo de 30 días para obtener un reembolso completo. Consulte nuestra página de Envíos y Devoluciones para obtener información detallada."
   },
   {
-    question: "Do you ship internationally?",
-    answer: "Yes, we ship to many countries worldwide. Shipping costs and times will vary depending on your location. You can see the available shipping options during checkout."
+    question: "¿Hacen envíos internacionales?",
+    answer: "Sí, enviamos a muchos países de todo el mundo. Los costos y tiempos de envío variarán según su ubicación. Puede ver las opciones de envío disponibles durante el proceso de pago."
   },
 ];
 
@@ -43,9 +43,9 @@ export default function FaqPage() {
   return (
     <div className="container mx-auto max-w-4xl px-4 py-16 sm:py-24">
       <div className="text-center mb-16">
-        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Frequently Asked Questions</h1>
+        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Preguntas Frecuentes</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          Have a question? We're here to help.
+          ¿Tienes una pregunta? Estamos aquí para ayudar.
         </p>
       </div>
 

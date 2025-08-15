@@ -7,11 +7,11 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: 'RespireVital - Breathe Better, Live Fuller',
+    default: 'RespireVital - Respira Mejor, Vive Plenamente',
     template: '%s | RespireVital',
   },
-  description: 'RespireVital offers innovative solutions for improving oral health and breathing. Explore our products, research, and expert advice.',
-  keywords: ['oral health', 'breathing', 'wellness', 'myofunctional therapy', 'sleep apnea'],
+  description: 'RespireVital ofrece soluciones innovadoras para mejorar la salud oral y la respiración. Explora nuestros productos, investigaciones y consejos de expertos.',
+  keywords: ['salud oral', 'respiración', 'bienestar', 'terapia miofuncional', 'apnea del sueño'],
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

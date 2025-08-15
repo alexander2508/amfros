@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-bold text-lg font-headline">RespireVital</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Dedicated to improving health through better breathing and oral posture.
+              Dedicados a mejorar la salud a través de una mejor respiración y postura oral.
             </p>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Facebook"><Facebook className="h-5 w-5 hover:text-primary" /></Link>
@@ -26,37 +26,37 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-headline font-semibold">Explore</h3>
+            <h3 className="font-headline font-semibold">Explorar</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-              <li><Link href="/shop" className="text-muted-foreground hover:text-primary">Products</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-primary">Sobre Nosotros</Link></li>
+              <li><Link href="/shop" className="text-muted-foreground hover:text-primary">Productos</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
-              <li><Link href="/specialists" className="text-muted-foreground hover:text-primary">Our Experts</Link></li>
+              <li><Link href="/specialists" className="text-muted-foreground hover:text-primary">Nuestros Expertos</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-headline font-semibold">Support</h3>
+            <h3 className="font-headline font-semibold">Soporte</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/faq" className="text-muted-foreground hover:text-primary">FAQ</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact Us</Link></li>
-              <li><Link href="/shipping" className="text-muted-foreground hover:text-primary">Shipping & Returns</Link></li>
-              <li><Link href="/privacy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="/faq" className="text-muted-foreground hover:text-primary">Preguntas Frecuentes</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contáctanos</Link></li>
+              <li><Link href="/shipping" className="text-muted-foreground hover:text-primary">Envíos y Devoluciones</Link></li>
+              <li><Link href="/privacy" className="text-muted-foreground hover:text-primary">Política de Privacidad</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-headline font-semibold">Stay Informed</h3>
-            <p className="mt-4 text-sm text-muted-foreground">Subscribe to our newsletter for the latest research and product updates.</p>
+            <h3 className="font-headline font-semibold">Mantente Informado</h3>
+            <p className="mt-4 text-sm text-muted-foreground">Suscríbete a nuestro boletín para recibir las últimas investigaciones y actualizaciones de productos.</p>
             <form className="mt-4 flex gap-2">
-              <Input type="email" placeholder="Enter your email" className="bg-background" />
-              <Button type="submit" className="font-headline">Subscribe</Button>
+              <Input type="email" placeholder="Ingresa tu correo" className="bg-background" />
+              <Button type="submit" className="font-headline">Suscribirse</Button>
             </form>
           </div>
         </div>
         
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} RespireVital. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RespireVital. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

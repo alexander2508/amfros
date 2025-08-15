@@ -11,13 +11,13 @@ import { ProductCard } from "@/components/product-card";
 import type { Product } from "@/types";
 
 export const metadata: Metadata = {
-    title: "User Panel",
-    description: "Manage your RespireVital account, orders, and preferences.",
+    title: "Panel de Usuario",
+    description: "Gestiona tu cuenta, pedidos y preferencias de RespireVital.",
 };
 
 const favoriteProducts: Product[] = [
-    { id: "2", name: "Myo-Functional Sleep Aid", price: 129.99, image: "https://placehold.co/600x600.png", imageHint: "sleep aid", description: "..." },
-    { id: "3", name: "Breathing Exercise Kit", price: 49.99, image: "https://placehold.co/600x600.png", imageHint: "exercise kit", description: "..." },
+    { id: "2", name: "Ayuda Miofuncional para el Sueño", price: 129.99, image: "https://placehold.co/600x600.png", imageHint: "ayuda para dormir", description: "..." },
+    { id: "3", name: "Kit de Ejercicios de Respiración", price: 49.99, image: "https://placehold.co/600x600.png", imageHint: "kit de ejercicio", description: "..." },
 ]
 
 export default function UserPanelPage() {
@@ -25,66 +25,66 @@ export default function UserPanelPage() {
         <div className="container mx-auto px-4 py-8 sm:py-12">
             <div className="flex justify-between items-start mb-8">
                 <div>
-                    <h1 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">My Account</h1>
-                    <p className="mt-2 text-muted-foreground">Welcome back, User!</p>
+                    <h1 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Mi Cuenta</h1>
+                    <p className="mt-2 text-muted-foreground">¡Bienvenido de nuevo, Usuario!</p>
                 </div>
                 <Button variant="outline">
                     <LogOut className="mr-2 h-4 w-4" />
-                    Sign Out
+                    Cerrar Sesión
                 </Button>
             </div>
             
             <Tabs defaultValue="profile" className="w-full">
                 <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
-                    <TabsTrigger value="profile" className="py-2"><User className="mr-2 h-4 w-4" /> Profile</TabsTrigger>
-                    <TabsTrigger value="orders" className="py-2"><Package className="mr-2 h-4 w-4" /> Orders</TabsTrigger>
-                    <TabsTrigger value="downloads" className="py-2"><Download className="mr-2 h-4 w-4" /> Downloads</TabsTrigger>
-                    <TabsTrigger value="favorites" className="py-2"><Heart className="mr-2 h-4 w-4" /> Favorites</TabsTrigger>
+                    <TabsTrigger value="profile" className="py-2"><User className="mr-2 h-4 w-4" /> Perfil</TabsTrigger>
+                    <TabsTrigger value="orders" className="py-2"><Package className="mr-2 h-4 w-4" /> Pedidos</TabsTrigger>
+                    <TabsTrigger value="downloads" className="py-2"><Download className="mr-2 h-4 w-4" /> Descargas</TabsTrigger>
+                    <TabsTrigger value="favorites" className="py-2"><Heart className="mr-2 h-4 w-4" /> Favoritos</TabsTrigger>
                 </TabsList>
                 <div className="mt-6">
                     <TabsContent value="profile">
                         <Card>
                             <CardHeader>
-                                <CardTitle>Profile Information</CardTitle>
-                                <CardDescription>Update your personal details and password.</CardDescription>
+                                <CardTitle>Información del Perfil</CardTitle>
+                                <CardDescription>Actualiza tus datos personales y contraseña.</CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-6">
                                 <div className="space-y-2">
-                                    <Label htmlFor="name">Full Name</Label>
+                                    <Label htmlFor="name">Nombre Completo</Label>
                                     <Input id="name" defaultValue="John Doe" />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label htmlFor="email">Email Address</Label>
+                                    <Label htmlFor="email">Correo Electrónico</Label>
                                     <Input id="email" type="email" defaultValue="john.doe@example.com" />
                                 </div>
                                 <Separator />
                                  <div className="space-y-2">
-                                    <Label htmlFor="current-password">Current Password</Label>
+                                    <Label htmlFor="current-password">Contraseña Actual</Label>
                                     <Input id="current-password" type="password" />
                                 </div>
                                  <div className="space-y-2">
-                                    <Label htmlFor="new-password">New Password</Label>
+                                    <Label htmlFor="new-password">Nueva Contraseña</Label>
                                     <Input id="new-password" type="password" />
                                 </div>
                             </CardContent>
                             <CardHeader className="pt-0">
-                                <Button className="font-headline">Save Changes</Button>
+                                <Button className="font-headline">Guardar Cambios</Button>
                             </CardHeader>
                         </Card>
                     </TabsContent>
                     <TabsContent value="orders">
                         <Card>
                             <CardHeader>
-                                <CardTitle>Order History</CardTitle>
-                                <CardDescription>Review your past purchases.</CardDescription>
+                                <CardTitle>Historial de Pedidos</CardTitle>
+                                <CardDescription>Revisa tus compras anteriores.</CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <Table>
                                     <TableHeader>
                                         <TableRow>
-                                            <TableHead>Order ID</TableHead>
-                                            <TableHead>Date</TableHead>
-                                            <TableHead>Status</TableHead>
+                                            <TableHead>ID de Pedido</TableHead>
+                                            <TableHead>Fecha</TableHead>
+                                            <TableHead>Estado</TableHead>
                                             <TableHead className="text-right">Total</TableHead>
                                         </TableRow>
                                     </TableHeader>
@@ -92,13 +92,13 @@ export default function UserPanelPage() {
                                         <TableRow>
                                             <TableCell className="font-medium">#RV1024</TableCell>
                                             <TableCell>2023-10-26</TableCell>
-                                            <TableCell>Shipped</TableCell>
+                                            <TableCell>Enviado</TableCell>
                                             <TableCell className="text-right">$129.99</TableCell>
                                         </TableRow>
                                         <TableRow>
                                             <TableCell className="font-medium">#RV1018</TableCell>
                                             <TableCell>2023-08-15</TableCell>
-                                            <TableCell>Delivered</TableCell>
+                                            <TableCell>Entregado</TableCell>
                                             <TableCell className="text-right">$79.99</TableCell>
                                         </TableRow>
                                     </TableBody>
@@ -109,18 +109,18 @@ export default function UserPanelPage() {
                     <TabsContent value="downloads">
                         <Card>
                              <CardHeader>
-                                <CardTitle>Your Downloads</CardTitle>
-                                <CardDescription>Access your purchased digital guides and resources.</CardDescription>
+                                <CardTitle>Tus Descargas</CardTitle>
+                                <CardDescription>Accede a tus guías y recursos digitales comprados.</CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <ul className="space-y-3">
                                     <li className="flex justify-between items-center p-3 rounded-md border">
-                                        <span>Breathing Exercises Guide.pdf</span>
-                                        <Button variant="outline" size="sm">Download</Button>
+                                        <span>Guía de Ejercicios de Respiración.pdf</span>
+                                        <Button variant="outline" size="sm">Descargar</Button>
                                     </li>
                                     <li className="flex justify-between items-center p-3 rounded-md border">
-                                        <span>Oral Posture Quick Start.pdf</span>
-                                        <Button variant="outline" size="sm">Download</Button>
+                                        <span>Inicio Rápido de Postura Oral.pdf</span>
+                                        <Button variant="outline" size="sm">Descargar</Button>
                                     </li>
                                 </ul>
                             </CardContent>
@@ -129,8 +129,8 @@ export default function UserPanelPage() {
                     <TabsContent value="favorites">
                         <Card>
                              <CardHeader>
-                                <CardTitle>Saved Items</CardTitle>
-                                <CardDescription>Your favorite products, all in one place.</CardDescription>
+                                <CardTitle>Artículos Guardados</CardTitle>
+                                <CardDescription>Tus productos favoritos, todo en un solo lugar.</CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

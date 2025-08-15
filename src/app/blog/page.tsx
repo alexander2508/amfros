@@ -9,45 +9,45 @@ import type { BlogPost } from "@/types";
 
 export const metadata: Metadata = {
     title: "Blog",
-    description: "Explore articles on oral health, breathing, scientific research, and lifestyle from the experts at RespireVital.",
+    description: "Explora artículos sobre salud oral, respiración, investigación científica y estilo de vida de los expertos de RespireVital.",
 };
 
 const blogPosts: BlogPost[] = [
     {
-        slug: "the-surprising-link-between-oral-posture-and-sleep-quality",
-        title: "The Surprising Link Between Oral Posture and Sleep Quality",
-        author: "Dr. Eleanor Vance",
+        slug: "la-sorprendente-conexion-entre-la-postura-oral-y-la-calidad-del-sueno",
+        title: "La Sorprendente Conexión Entre la Postura Oral y la Calidad del Sueño",
+        author: "Dra. Eleanor Vance",
         authorAvatar: "https://placehold.co/100x100.png",
-        date: "October 26, 2023",
-        excerpt: "Discover how the way you hold your jaw and tongue during the day can dramatically affect your sleep at night. We dive into the science of myofunctional therapy.",
-        category: "Scientific Research",
+        date: "26 de Octubre, 2023",
+        excerpt: "Descubre cómo la forma en que sostienes la mandíbula y la lengua durante el día puede afectar drásticamente tu sueño por la noche. Profundizamos en la ciencia de la terapia miofuncional.",
+        category: "Investigación Científica",
         content: "",
         image: "https://placehold.co/1200x600.png",
-        imageHint: "person sleeping peacefully",
+        imageHint: "persona durmiendo pacificamente",
     },
     {
-        slug: "5-breathing-exercises-to-boost-your-energy",
-        title: "5 Breathing Exercises to Boost Your Energy",
+        slug: "5-ejercicios-de-respiracion-para-aumentar-tu-energia",
+        title: "5 Ejercicios de Respiración para Aumentar tu Energía",
         author: "Dr. Kenji Tanaka",
         authorAvatar: "https://placehold.co/100x100.png",
-        date: "October 15, 2023",
-        excerpt: "Feeling sluggish? These five simple breathing techniques can increase oxygenation and give you a natural energy boost, anytime, anywhere.",
-        category: "Lifestyle",
+        date: "15 de Octubre, 2023",
+        excerpt: "¿Te sientes perezoso? Estas cinco sencillas técnicas de respiración pueden aumentar la oxigenación y darte un impulso de energía natural, en cualquier momento y lugar.",
+        category: "Estilo de Vida",
         content: "",
         image: "https://placehold.co/1200x600.png",
-        imageHint: "person meditating outdoors",
+        imageHint: "persona meditando al aire libre",
     },
     {
-        slug: "why-nasal-breathing-is-a-superpower",
-        title: "Why Nasal Breathing is a Superpower You Didn't Know You Had",
-        author: "Dr. Eleanor Vance",
+        slug: "por-que-la-respiracion-nasal-es-un-superpoder",
+        title: "Por Qué la Respiración Nasal es un Superpoder que No Sabías que Tenías",
+        author: "Dra. Eleanor Vance",
         authorAvatar: "https://placehold.co/100x100.png",
-        date: "September 28, 2023",
-        excerpt: "Breathing through your nose does more than just deliver air. It filters, warms, and humidifies it, while also boosting nitric oxide. Learn why it's crucial for your health.",
-        category: "Oral Health",
+        date: "28 de Septiembre, 2023",
+        excerpt: "Respirar por la nariz hace más que solo transportar aire. Lo filtra, calienta y humidifica, a la vez que aumenta el óxido nítrico. Descubre por qué es crucial para tu salud.",
+        category: "Salud Oral",
         content: "",
         image: "https://placehold.co/1200x600.png",
-        imageHint: "closeup nose profile",
+        imageHint: "primer plano perfil nariz",
     },
 ];
 
@@ -55,9 +55,9 @@ export default function BlogPage() {
     return (
         <div className="container mx-auto px-4 py-16 sm:py-24">
             <div className="text-center mb-16">
-                <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">RespireVital Blog</h1>
+                <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Blog de RespireVital</h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                    Insights and knowledge from the forefront of respiratory and oral wellness.
+                    Conocimientos e ideas desde la vanguardia del bienestar respiratorio y oral.
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -87,7 +87,7 @@ export default function BlogPage() {
                                 </div>
                             </div>
                              <Link href={`/blog/${post.slug}`} className="text-primary hover:text-primary/80 flex items-center text-sm font-semibold">
-                                Read More <ArrowRight className="ml-1 h-4 w-4" />
+                                Leer Más <ArrowRight className="ml-1 h-4 w-4" />
                             </Link>
                         </CardFooter>
                     </Card>

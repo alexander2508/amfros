@@ -38,7 +38,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </p>
         <Button size="sm" className="font-headline">
           <ShoppingCart className="mr-2 h-4 w-4" />
-          Add to Cart
+          Añadir al Carrito
         </Button>
       </CardFooter>
     </Card>
