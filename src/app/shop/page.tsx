@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 const products: Product[] = [
+    { id: "manual-ortopedia-funcional", name: "Manual de Ortopedia Funcional Mandibular", price: 99.99, image: "https://placehold.co/600x600.png", imageHint: "libro medico portada", description: "Una guía práctica y completa para el diagnóstico y manejo temprano de la Clase II Esquelética." },
     { id: "1", name: "Entrenador de Postura Oral", price: 79.99, image: "https://placehold.co/600x600.png", imageHint: "dispositivo medico", description: "..." },
     { id: "2", name: "Ayuda Miofuncional para el Sueño", price: 129.99, image: "https://placehold.co/600x600.png", imageHint: "ayuda para dormir", description: "..." },
     { id: "3", name: "Kit de Ejercicios de Respiración", price: 49.99, image: "https://placehold.co/600x600.png", imageHint: "kit de ejercicios", description: "..." },
