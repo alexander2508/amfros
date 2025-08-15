@@ -9,33 +9,80 @@ import type { FaqItem } from "@/types";
 
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes",
-  description: "Encuentra respuestas a preguntas comunes sobre los productos AMFROS, envíos y nuestro enfoque de la salud.",
+  description:
+    "Respuestas sobre el libro de Ortopedia Funcional Mandibular (Clase II) y el AAMF: contenidos, uso clínico, formatos y compra.",
 };
 
 const faqItems: FaqItem[] = [
   {
-    question: "¿Qué es la terapia miofuncional?",
-    answer: "La terapia miofuncional es un programa de ejercicios que ayuda a reeducar los músculos de la boca, la lengua y la cara para que funcionen correctamente. A menudo se utiliza para corregir la deglución, la respiración y las posturas de reposo incorrectas de la lengua y los labios, que pueden afectar la salud dental, el sueño y más."
+    question: "¿De qué trata el libro?",
+    answer:
+      "Es una guía clínica y científica en 8 capítulos sobre crecimiento y desarrollo cráneo–naso–maxilo–mandibular, diagnóstico oportuno de la Clase II esquelética y un protocolo con AAMF (Aparato de Adelantamiento Mandibular Fijo). Integra fundamentos como Matriz Funcional, mecanotransducción y teoría del servosistema, y los traduce en pasos clínicos reproducibles.",
   },
   {
-    question: "¿Son seguros sus productos?",
-    answer: "Absolutamente. Todos los productos de AMFROS están hechos de materiales biocompatibles de alta calidad y de grado médico. Están diseñados en consulta con dentistas y expertos médicos para garantizar que sean seguros y efectivos cuando se usan según las indicaciones."
+    question: "¿A quién está dirigido?",
+    answer:
+      "A odontólogos, ortodoncistas, odontopediatras, especialistas en ortopedia maxilar y estudiantes avanzados que buscan una ruta práctica para la intervención oportuna de la Clase II esquelética.",
   },
   {
-    question: "¿Cuánto tiempo se tarda en ver resultados?",
-    answer: "Los resultados pueden variar según el individuo y el producto específico. Muchos usuarios informan mejoras notables a las pocas semanas de uso constante. Para obtener los mejores resultados, recomendamos seguir las instrucciones incluidas y usar los productos como parte de una rutina diaria."
+    question: "¿Qué es el AAMF?",
+    answer:
+      "El AAMF es un aparato ortopédico funcional fijo descrito en el libro. Favorece la descompresión de la ATM, restablece propiocepciones (incisiva, muscular, lingual y de la ATM) y permite lateralidades al no unir maxilar y mandíbula, contribuyendo a un patrón funcional más fisiológico.",
   },
   {
-    question: "¿Puedo usar sus productos si tengo brackets u otro trabajo dental?",
-    answer: "Depende del producto y de su situación dental específica. Recomendamos encarecidamente consultar con su dentista u ortodoncista antes de comenzar a usar cualquier dispositivo oral nuevo para asegurarse de que sea apropiado para usted."
+    question: "¿Qué significan CPT y EN en el protocolo?",
+    answer:
+      "CPT es el Cambio de Postura Terapéutica hasta el límite fisiológico; EN es la Excitación Neural mediante guía anterior/contactos que reactivan la propiocepción. Juntos orientan la adaptación mandibular, la estabilidad y el crecimiento condilar secundario.",
   },
   {
-    question: "¿Cuál es su política de devoluciones?",
-    answer: "Ofrecemos una garantía de satisfacción de 30 días en la mayoría de nuestros productos. Si no está completamente satisfecho con su compra, puede devolverla en un plazo de 30 días para obtener un reembolso completo. Consulte nuestra página de Envíos y Devoluciones para obtener información detallada."
+    question: "¿Cuándo es el momento ideal para intervenir?",
+    answer:
+      "El libro detalla el diagnóstico del pico puberal y criterios complementarios (ej. valoración cervical/carpograma) para decidir el inicio terapéutico y maximizar la respuesta adaptativa.",
   },
   {
-    question: "¿Hacen envíos internacionales?",
-    answer: "Sí, enviamos a muchos países de todo el mundo. Los costos y tiempos de envío variarán según su ubicación. Puede ver las opciones de envío disponibles durante el proceso de pago."
+    question: "¿Por qué es importante el plano oclusal?",
+    answer:
+      "La relación del plano oclusal con la rotación y la posición mandibular es clave. El texto explica cómo su control influye en la dirección del crecimiento y en la estabilidad del cambio terapéutico.",
+  },
+  {
+    question: "¿Qué diferencia al AAMF de otros aparatos?",
+    answer:
+      "Es fijo, cómodo, permite lateralidades, promueve la descompresión de la ATM y facilita la propiocepción. El libro compara sus ventajas frente a dispositivos removibles o fijaciones que limitan la función.",
+  },
+  {
+    question: "¿Incluye casos clínicos o pasos de instalación?",
+    answer:
+      "Sí. Presenta una ruta paso a paso para diagnóstico, instalación, seguimiento y resolución de problemas, con criterios de control y evaluación de resultados.",
+  },
+  {
+    question: "¿El libro está disponible en formato digital o impreso?",
+    answer:
+      "Está disponible en PDF (digital) y próximamente en edición impresa. Si compras la versión digital, podrás acceder a futuras correcciones menores sin costo adicional.",
+  },
+  {
+    question: "¿Puedo usar el AAMF sin formación específica?",
+    answer:
+      "No. El AAMF es un recurso clínico para profesionales formados. El libro es una guía técnica; no sustituye la capacitación, el juicio clínico ni la normativa sanitaria local.",
+  },
+  {
+    question: "¿Qué contenido científico respalda el enfoque?",
+    answer:
+      "Se apoyan conceptos de Matriz Funcional, mecanotransducción, servosistema/cibernética y evidencia sobre la capacidad adaptativa del cóndilo ante fuerzas adecuadas, integrados en un protocolo clínico.",
+  },
+  {
+    question: "¿Cómo aprovechar mejor el contenido del libro?",
+    answer:
+      "Estudia los fundamentos, realiza el diagnóstico del pico puberal, planifica el CPT, controla el plano oclusal y sigue el protocolo con indicadores de seguimiento. La reproducibilidad depende de adherirte a cada paso.",
+  },
+  {
+    question: "¿Cuál es la política de compra y soporte del libro?",
+    answer:
+      "Las compras digitales permiten descarga inmediata. Para dudas editoriales o acceso, usa el canal de contacto del sitio. Las políticas de cambios/devoluciones para la edición impresa se especifican en la página de compra.",
+  },
+  {
+    question: "¿El libro aborda contraindicaciones o precauciones?",
+    answer:
+      "Incluye consideraciones clínicas y criterios para selección de casos. Toda intervención debe ajustarse al examen integral del paciente, consentimiento informado y normativa vigente.",
   },
 ];
 
@@ -43,9 +90,11 @@ export default function FaqPage() {
   return (
     <div className="container mx-auto max-w-4xl px-4 py-16 sm:py-24">
       <div className="text-center mb-16">
-        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Preguntas Frecuentes</h1>
+        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
+          Preguntas Frecuentes
+        </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          ¿Tienes una pregunta? Estamos aquí para ayudar.
+          Encuentra respuestas sobre el libro y el AAMF: fundamentos, protocolo, formatos y compra.
         </p>
       </div>
 
