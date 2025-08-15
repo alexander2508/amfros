@@ -39,7 +39,7 @@ export function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+    <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
       <CardHeader className="p-0">
         <Link href={`/shop/${product.id}`} className="block">
           <div className="aspect-square relative w-full overflow-hidden">
@@ -48,7 +48,7 @@ export function ProductCard({ product }: ProductCardProps) {
               alt={product.name}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
-              data-ai-hint={product.imageHint}
+              data-ai-hint={product.imageHint || ''}
             />
           </div>
         </Link>

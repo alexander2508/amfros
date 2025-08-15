@@ -1,4 +1,3 @@
-
 import { Metadata } from "next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -65,8 +64,6 @@ export default function UserPanelPage() {
                                     <Label htmlFor="new-password">Nueva Contraseña</Label>
                                     <Input id="new-password" type="password" />
                                 </div>
-                            </CardContent>
-                            <CardContent>
                                 <Button className="font-headline">Guardar Cambios</Button>
                             </CardContent>
                         </Card>
@@ -126,7 +123,7 @@ export default function UserPanelPage() {
                              <CardHeader>
                                 <CardTitle>Artículos Guardados</CardTitle>
                                 <CardDescription>Tus productos favoritos, todo en un solo lugar.</CardDescription>
-                            </Header>
+                            </CardHeader>
                             <CardContent>
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {favoriteProducts.map((product) => (
