@@ -1,4 +1,9 @@
-import { Metadata } from "next";
+
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/auth-context';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,22 +16,34 @@ import { ProductCard } from "@/components/product-card";
 import type { Product } from "@/types";
 import { getAllProducts } from "@/lib/products";
 
-export const metadata: Metadata = {
-    title: "Panel de Usuario",
-    description: "Gestiona tu cuenta, pedidos y preferencias de AMFROS.",
-};
-
 const favoriteProducts: Product[] = getAllProducts();
 
 export default function UserPanelPage() {
+    const { user, loading, logout } = useAuth();
+    const router = useRouter();
+
+    useEffect(() => {
+        if (!loading && !user) {
+            router.push('/login');
+        }
+    }, [user, loading, router]);
+
+    if (loading || !user) {
+        return (
+            <div className="container mx-auto px-4 py-8 sm:py-12 text-center">
+                <p>Cargando...</p>
+            </div>
+        );
+    }
+    
     return (
         <div className="container mx-auto px-4 py-8 sm:py-12">
             <div className="flex justify-between items-start mb-8">
                 <div>
                     <h1 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Mi Cuenta</h1>
-                    <p className="mt-2 text-muted-foreground">¡Bienvenido de nuevo, Usuario!</p>
+                    <p className="mt-2 text-muted-foreground">¡Bienvenido de nuevo, {user.displayName || user.email}!</p>
                 </div>
-                <Button variant="outline">
+                <Button variant="outline" onClick={logout}>
                     <LogOut className="mr-2 h-4 w-4" />
                     Cerrar Sesión
                 </Button>
@@ -49,20 +66,20 @@ export default function UserPanelPage() {
                             <CardContent className="space-y-6">
                                 <div className="space-y-2">
                                     <Label htmlFor="name">Nombre Completo</Label>
-                                    <Input id="name" defaultValue="John Doe" />
+                                    <Input id="name" defaultValue={user.displayName || ""} />
                                 </div>
                                 <div className="space-y-2">
                                     <Label htmlFor="email">Correo Electrónico</Label>
-                                    <Input id="email" type="email" defaultValue="john.doe@example.com" />
+                                    <Input id="email" type="email" defaultValue={user.email || ""} disabled />
                                 </div>
                                 <Separator />
                                  <div className="space-y-2">
                                     <Label htmlFor="current-password">Contraseña Actual</Label>
-                                    <Input id="current-password" type="password" />
+                                    <Input id="current-password" type="password" placeholder="Dejar en blanco para no cambiar" />
                                 </div>
                                  <div className="space-y-2">
                                     <Label htmlFor="new-password">Nueva Contraseña</Label>
-                                    <Input id="new-password" type="password" />
+                                    <Input id="new-password" type="password" placeholder="Dejar en blanco para no cambiar" />
                                 </div>
                                 <Button className="font-headline">Guardar Cambios</Button>
                             </CardContent>

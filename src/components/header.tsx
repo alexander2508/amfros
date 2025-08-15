@@ -7,8 +7,18 @@ import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, User } from "lucide-react";
+import { Menu, User, LogOut, Shield } from "lucide-react";
 import { CartSheet } from "./cart-sheet";
+import { useAuth } from "@/context/auth-context";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 const navItems = [
   { href: "/", label: "Inicio" },
@@ -22,6 +32,64 @@ const navItems = [
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const pathname = usePathname();
+  const { user, loading, logout } = useAuth();
+
+  const UserMenu = () => {
+    if (loading) {
+      return <div className="h-8 w-8 rounded-full bg-muted animate-pulse" />;
+    }
+
+    if (!user) {
+      return (
+        <Button asChild>
+          <Link href="/login">Iniciar Sesión</Link>
+        </Button>
+      );
+    }
+
+    return (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+            <Avatar className="h-10 w-10">
+              <AvatarImage src={user.photoURL || undefined} alt="Avatar de usuario" />
+              <AvatarFallback>
+                {user.email ? user.email.charAt(0).toUpperCase() : <User />}
+              </AvatarFallback>
+            </Avatar>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="w-56" align="end">
+          <DropdownMenuLabel>
+            <div className="flex flex-col space-y-1">
+              <p className="text-sm font-medium leading-none">{user.displayName || 'Usuario'}</p>
+              <p className="text-xs leading-none text-muted-foreground">
+                {user.email}
+              </p>
+            </div>
+          </DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem asChild>
+            <Link href="/user">
+              <User className="mr-2 h-4 w-4" />
+              <span>Panel de Usuario</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/admin">
+              <Shield className="mr-2 h-4 w-4" />
+              <span>Admin</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem onClick={logout}>
+            <LogOut className="mr-2 h-4 w-4" />
+            <span>Cerrar Sesión</span>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    );
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -82,8 +150,19 @@ export function Header() {
                     <User className="mr-2 h-4 w-4" /> Panel de Usuario
                 </Link>
                 <Link href="/admin" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                    <User className="mr-2 h-4 w-4" /> Panel de Administración
+                    <Shield className="mr-2 h-4 w-4" /> Panel de Administración
                 </Link>
+                 {user && (
+                    <button
+                        onClick={() => {
+                            logout();
+                            setIsMobileMenuOpen(false);
+                        }}
+                        className="flex items-center text-red-500"
+                    >
+                        <LogOut className="mr-2 h-4 w-4" /> Cerrar Sesión
+                    </button>
+                 )}
             </div>
           </SheetContent>
         </Sheet>
@@ -94,9 +173,7 @@ export function Header() {
 
         <div className="flex flex-1 items-center justify-end space-x-2">
           <div className="hidden md:flex items-center space-x-2">
-             <Button variant="ghost" size="icon" asChild>
-                <Link href="/user"><User className="h-5 w-5" /></Link>
-            </Button>
+            <UserMenu />
           </div>
           <CartSheet />
         </div>
