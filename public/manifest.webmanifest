@@ -1,0 +1,22 @@
+{
+  "name": "AMFROS",
+  "short_name": "AMFROS",
+  "description": "AMFROS ofrece soluciones innovadoras para mejorar la salud oral y la respiración. Explora nuestros productos, investigaciones y consejos de expertos.",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#22508F",
+  "background_color": "#F5F5F5",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
