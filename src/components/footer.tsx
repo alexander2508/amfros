@@ -57,6 +57,9 @@ export function Footer() {
         
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} AMFROS. Todos los derechos reservados.</p>
+          <p className="mt-2">
+            Desarrollado por Fabián Muñoz Puello y diseñado por Leidy Vega Anaya para Tecnosalud Internacional.
+          </p>
         </div>
       </div>
     </footer>
